@@ -6,7 +6,7 @@
 /*   By: junsyun <junsyun@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 14:45:29 by junsyun           #+#    #+#             */
-/*   Updated: 2022/10/30 23:59:03 by junsyun          ###   ########.fr       */
+/*   Updated: 2022/11/05 23:52:27 by junsyun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,14 @@ typedef struct s_stack
 {
 	t_node	*top;
 	t_node	*bot;
+	int		size;
 }	t_stack;
+
+typedef struct s_tuple
+{
+	t_stack	*A;
+	t_stack	*B;
+}				t_tuple;
 
 /* valid check or error */
 void	print_manual(void);
@@ -35,15 +42,15 @@ void	print_manual(void);
 /* instruction Rules */
 void		sa(t_stack *a, int flag);
 void		sb(t_stack *b, int flag);
-void		ss(t_stack a, t_stack b);
-void		pa(t_stack a, t_stack b);
-void		pb(t_stack a, t_stack b);
+void		ss(t_tuple tuple);
+void		pa(t_tuple tuple);
+void		pb(t_tuple tuple);
 void		ra(t_stack *a, int flag);
 void		rb(t_stack *b, int flag);
-void		rr(t_stack a, t_stack b);
+void		rr(t_tuple tuple);
 void		rra(t_stack *a, int flag);
 void		rrb(t_stack *b, int flag);
-void		rrr(t_stack a, t_stack b);
+void		rrr(t_tuple tuple);
 
 
 #endif
