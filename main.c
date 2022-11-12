@@ -6,7 +6,7 @@
 /*   By: junsyun <junsyun@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 14:38:51 by junsyun           #+#    #+#             */
-/*   Updated: 2022/10/30 00:11:33 by junsyun          ###   ########.fr       */
+/*   Updated: 2022/11/12 23:53:37 by junsyun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,23 +44,23 @@ static int	ft_atoi(const char *str)
 	return ((int)ans * sign);
 }
 
-int	main(int ac, char **argv)
+int	main(int ac, char **av)
 {
-	t_stack	A;
-	t_stack B;
-	int	i;
+	t_tuple	*tuple;
+	int		*arr;
 
 	if (ac <2)
 	{
 		print_manual();
 		exit(1);
 	}
-	i = ac - 1;
-	
-	while (i > 0)
-	{
-		
-	}
+
+	tuple = init();
+	data_parsing(tuple, ac, av);
+	if (tuple->A->size == 1)
+		return(0);
+	arr = data_arr(tuple);
+	sort_handle(tuple, arr);
 	
 	
 	return (0);
