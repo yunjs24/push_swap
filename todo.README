@@ -1,0 +1,23 @@
+## 1. a스택에 push하는부분 수정하기
+
+## 2. sort 부분을 push_swap으로
+
+## 3. lst_utils -> init 관련 이름으로 변경하기
+
+## 4. free module (A,B) 만들기
+
+## 5. option r, rr, sp등등 promt로 naming
+
+## 6. write 하는부분 (option부분)
+
+## 7. a_l, b_l 표현 수정 (-> ex) a_cnt, a_step) 
+
+## 8. checker 구현
+
+9. 
+  - stdio.h 등 헤더 포함문장 확인 (printf 등등)
+  - 42 header 확인
+  - norm check
+  - leaks check
+  - 2중 free 주의
+  - makefile test

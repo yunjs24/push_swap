@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: junsyun <junsyun@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/14 14:33:40 by junsyun           #+#    #+#             */
-/*   Updated: 2022/11/12 23:58:13 by junsyun          ###   ########.fr       */
+/*   Created: 2022/02/03 02:25:53 by junsyun           #+#    #+#             */
+/*   Updated: 2022/03/09 17:14:32 by junsyun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-int	sort_check(t_tuple *tuple)
+t_list	*ft_lstlast(t_list *lst)
 {
-	t_node	*node;
-
-	node = tuple->A->top;
-	while (node->next)
+	while (lst)
 	{
-		if (node->value > node->next->value)
-			return (1);
-		node = node->next;
+		if (!lst->next)
+			return (lst);
+		lst = lst->next;
 	}
-	return (0);
+	return (lst);
 }
